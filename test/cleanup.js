@@ -1,5 +1,6 @@
 const test = require("ava");
 const tmpdir = require("tmpdir");
+const fs = require("fs");
 
 tmpdir();
 
@@ -10,6 +11,16 @@ test.serial("store path", t => {
   path = t.context.tmp;
 });
 
-test.serial("old directory doesn't exist", t => {
-  t.false(require("fs").existsSync(path));
+test.serial("removes directory", t => {
+  t.false(fs.existsSync(path));
+});
+
+test.serial("write file", t => {
+  t.plan(0);
+  path = t.context.tmp;
+  fs.writeFileSync(`${path}/test.txt`, "Hello World");
+});
+
+test.serial("removes directory even with contents", t => {
+  t.false(fs.existsSync(path));
 });
