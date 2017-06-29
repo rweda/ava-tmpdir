@@ -1,6 +1,6 @@
 {
   "name": "@rweda/ava-tmpdir",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "beforeEach hook to create temporary directories.",
   "main": "tmpdir.js",
   "scripts": {
