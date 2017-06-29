@@ -6,7 +6,7 @@ module.exports = modconf
   // .option(tmpOpts, ...) See https://github.com/CodeLenny/modconf/issues/14
   .option(Object, "tmp", {
     description: "Configuration for the 'tmp' library",
-    default: { "unsafeCleanup": true },
+    default: tmpOpts.defaults,
   })
   .option(String, "path", {
     description: "The AVA context variable to store the directories path in.  If 'false', the path is not saved.",
@@ -15,4 +15,9 @@ module.exports = modconf
   .option(String, "context", {
     description: "The AVA context variable to store the cleanup function and other library options in.",
     default: "_tmpDir",
+  })
+  .defaults({
+    tmp: {
+      unsafeCleanup: true,
+    },
   });
