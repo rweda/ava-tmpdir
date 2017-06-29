@@ -4,7 +4,7 @@
   "description": "beforeEach hook to create temporary directories.",
   "main": "tmpdir.js",
   "scripts": {
-    "test": "ava"
+    "test": "NODE_PATH=. ava"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,14 @@
     "url": "https://github.com/rweda/ava-tmpdir/issues"
   },
   "homepage": "https://github.com/rweda/ava-tmpdir#readme",
-  "dependencies": {},
-  "devDependencies": {}
+  "peerDependencies": {
+    "ava": "^0.20.0"
+  },
+  "dependencies": {
+    "modconf": "0.0.1",
+    "tmp-promise": "^1.0.3"
+  },
+  "devDependencies": {
+    "ava": "^0.20.0"
+  }
 }
