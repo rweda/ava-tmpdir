@@ -1,0 +1,21 @@
+{
+  "name": "@rweda/ava-tmpdir",
+  "version": "0.0.0",
+  "description": "beforeEach hook to create temporary directories.",
+  "main": "tmpdir.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rweda/ava-tmpdir.git"
+  },
+  "author": "Redwood EDA (http://redwoodeda.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rweda/ava-tmpdir/issues"
+  },
+  "homepage": "https://github.com/rweda/ava-tmpdir#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}
